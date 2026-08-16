@@ -13,15 +13,19 @@ export default function App() {
     { id: 1, nombre: 'Arroz Grado 1 (1kg)', categoria: 'Abarrotes', precio: 1350, stock: 28, imagen: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80', oferta: true, precioAnterior: 1690 },
     { id: 2, nombre: 'Aceite Maravilla 1L', categoria: 'Abarrotes', precio: 2690, stock: 15, imagen: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=400&q=80' },
     { id: 3, nombre: 'Leche Entera 1L', categoria: 'Lácteos', precio: 1100, stock: 45, imagen: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=400&q=80' },
-    { id: 4, nombre: 'Detergente Líquido 3L', categoria: 'Limpieza', precio: 8990, stock: 2, imagen: 'https://images.unsplash.com/photo-1610996843330-802521151670?auto=format&fit=crop&w=400&q=80', oferta: true, precioAnterior: 10990 },
-    { id: 5, nombre: 'Bebida Cola 2.5L', categoria: 'Bebidas', precio: 2100, stock: 18, imagen: 'https://images.unsplash.com/photo-1624517452488-048d94e7e31b?auto=format&fit=crop&w=400&q=80' },
+    { id: 4, nombre: 'Detergente Líquido 3L', categoria: 'Limpieza', precio: 8990, stock: 8, imagen: 'https://images.unsplash.com/photo-1585830812416-a6c86bb14576?auto=format&fit=crop&w=400&q=80', oferta: true, precioAnterior: 10990 },
+    { id: 5, nombre: 'Bebida Cola 2.5L', categoria: 'Bebidas', precio: 2100, stock: 18, imagen: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=400&q=80' },
     { id: 6, nombre: 'Pan de Molde Familiar', categoria: 'Panadería', precio: 2400, stock: 4, imagen: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80', oferta: true, precioAnterior: 2890 },
     { id: 7, nombre: 'Tomate Ensalada (1kg)', categoria: 'Frutas y Verduras', precio: 1500, stock: 30, imagen: 'https://images.unsplash.com/photo-1592924357228-9564da86a77a?auto=format&fit=crop&w=400&q=80' },
     { id: 8, nombre: 'Manzana Fuji (1kg)', categoria: 'Frutas y Verduras', precio: 1800, stock: 20, imagen: 'https://images.unsplash.com/photo-1568702846914-96b305d2aa03?auto=format&fit=crop&w=400&q=80' },
     { id: 9, nombre: 'Yogurt Batido 125g', categoria: 'Lácteos', precio: 350, stock: 100, imagen: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80' },
     { id: 10, nombre: 'Fideos Spaghetti 400g', categoria: 'Abarrotes', precio: 750, stock: 50, imagen: 'https://images.unsplash.com/photo-1551462147-ff29853fda2e?auto=format&fit=crop&w=400&q=80' },
-    { id: 11, nombre: 'Jabón Líquido Manos', categoria: 'Limpieza', precio: 2200, stock: 25, imagen: 'https://images.unsplash.com/photo-1600857999808-2c39e24693a1?auto=format&fit=crop&w=400&q=80' },
-    { id: 12, nombre: 'Agua Mineral 1.5L', categoria: 'Bebidas', precio: 950, stock: 40, imagen: 'https://images.unsplash.com/photo-1520520745294-81e592754d9b?auto=format&fit=crop&w=400&q=80' }
+    { id: 11, nombre: 'Jabón Líquido Manos 500ml', categoria: 'Limpieza', precio: 2200, stock: 25, imagen: 'https://images.unsplash.com/photo-1600857999808-2c39e24693a1?auto=format&fit=crop&w=400&q=80' },
+    { id: 12, nombre: 'Agua Mineral Sin Gas 1.5L', categoria: 'Bebidas', precio: 950, stock: 40, imagen: 'https://images.unsplash.com/photo-1520520745294-81e592754d9b?auto=format&fit=crop&w=400&q=80' },
+    { id: 13, nombre: 'Café Instantáneo 170g', categoria: 'Abarrotes', precio: 4500, stock: 12, imagen: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80' },
+    { id: 14, nombre: 'Queso Gauda Laminado 250g', categoria: 'Lácteos', precio: 2890, stock: 14, imagen: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80', oferta: true, precioAnterior: 3490 },
+    { id: 15, nombre: 'Alimento Perro Adulto 3kg', categoria: 'Mascotas', precio: 9990, stock: 6, imagen: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=400&q=80' },
+    { id: 16, nombre: 'Alimento Gato Cachorro 1.5kg', categoria: 'Mascotas', precio: 8490, stock: 9, imagen: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=400&q=80' }
   ]);
 
   const [nuevoProducto, setNuevoProducto] = useState({ nombre: '', categoria: 'Abarrotes', precio: '', stock: '', imagen: '' });
@@ -60,7 +64,7 @@ export default function App() {
         <main className="max-w-6xl mx-auto p-4 sm:p-6 space-y-8 flex-1 w-full">
           <Banner />
 
-          {/* BUSCADOR Y MENU CATEGORÍAS */}
+          {/* BUSCADOR Y FILTRO DE CATEGORÍAS */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-stretch bg-slate-800 p-4 rounded-xl border border-slate-700">
             <input
               type="text"
@@ -97,15 +101,15 @@ export default function App() {
             </div>
           </div>
 
-          {/* CARDS PRODUCTOS */}
+          {/* GRILLA DE PRODUCTOS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {productosFiltrados.map((item) => (
-              <div key={item.id} className="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+              <div key={item.id} className="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between hover:border-slate-600 transition">
                 <div>
                   <div className="relative h-48 bg-slate-900">
                     <img src={item.imagen} alt={item.nombre} className="w-full h-full object-cover" />
-                    {item.oferta && <span className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md">OFERTA</span>}
-                    <span className="absolute top-3 right-3 bg-slate-900/80 text-slate-300 text-[10px] px-2 py-0.5 rounded-md">{item.categoria}</span>
+                    {item.oferta && <span className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow">OFERTA</span>}
+                    <span className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-slate-300 text-[10px] px-2 py-0.5 rounded-md">{item.categoria}</span>
                   </div>
                   <div className="p-4 space-y-2">
                     <h3 className="font-bold text-white line-clamp-1">{item.nombre}</h3>
@@ -117,7 +121,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="p-4 pt-0">
-                  <button onClick={() => alert(`Añadiste "${item.nombre}"`)} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-xl text-sm transition cursor-pointer">
+                  <button onClick={() => alert(`Añadiste "${item.nombre}" al carrito`)} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-xl text-sm transition cursor-pointer">
                     + Agregar al Carrito
                   </button>
                 </div>
@@ -169,7 +173,7 @@ export default function App() {
         </main>
       )}
 
-      {/* MODAL */}
+      {/* MODAL AGREGAR PRODUCTO */}
       {modalAbierto && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-6 w-full max-w-md shadow-2xl">
