@@ -1,3 +1,28 @@
+/* 1. Reseteo universal de estilos por defecto */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Fondo global y altura completa */
+html, body {
+  min-height: 100vh;
+  background-color: #0f172a !important;
+  color: #f8fafc;
+}
+
+/* 3. Variables de tu plantilla */
+:root {
+  --accent: #38bdf8;
+  --accent-bg: rgba(56, 189, 248, 0.12);
+  --accent-border: #38bdf8;
+  --border: #1e293b;
+  --text-h: #ffffff;
+  --social-bg: #1e293b;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
