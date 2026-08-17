@@ -207,3 +207,26 @@ html, body {
     border-right-color: var(--border);
   }
 }
+
+/* --- REGLAS AGREGADAS AL FINAL --- */
+
+/* Asegurar que el contenedor principal de React tome el fondo oscuro */
+#root, .app, main {
+  background-color: #0f172a;
+  min-height: 100vh;
+}
+
+/* Cambiar las tarjetas de productos */
+.card, 
+div[class*="card"], 
+.product-card {
+  background-color: var(--social-bg) !important;
+  color: var(--text-h) !important;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+/* Ajustar los textos secundarios del catálogo */
+h1, h2, h3, p, span {
+  color: var(--text-h);
+}
